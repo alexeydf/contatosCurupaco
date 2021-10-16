@@ -16,6 +16,21 @@ class Contato{
   public $data;
   public $situacao;
 
+  public function texto(){
+    $texto = '
+    <div class="contatos-conteudo">
+      <a href="index.php?menuop=contato&id='.$this->id.'">
+        <header class="contatos-header">
+          <p class="nome">'.$this->nome.'</p>
+          <p class="assunto">'.$this->assunto.'</p>
+          <p class="data">'.data($this->data).'</p>
+        </header>
+      </a>
+    ';
+
+    return $texto;
+  }
+
   public function addContato(){
     $baseDados = new Database('contatos');
     $this->id = $baseDados->insert([
@@ -30,8 +45,14 @@ class Contato{
     return true;
   }
 
+  public static function getContato($chave, $valor){
+    return (new Database('contatos'))->select(' '.$chave.' = "'.$valor.'"')->fetchObject(self::class);
+  }
+
   public function marcarLido(){
-    return (new Database('tb_mensagem'))->update(' id = '.$this->id,'situacao = 1');
+    return (new Database('contatos'))->update(' id = ' . $this->id, [
+      'situacao' => $this->situacao
+    ]);
   }
 
   public function excluir(){
@@ -46,14 +67,11 @@ class Contato{
     return true;
   }
 
-  public static function listarMsg($where = null, $order = null, $limit = null){
-    return (new Database('tb_mensagem'))->select($where, $order, $limit)
+  public static function listar($where = null, $order = null, $limit = null){
+    return (new Database('contatos'))->select($where, $order, $limit)
                                   ->fetchAll(PDO::FETCH_CLASS,self::class);
   }
 
-  public static function debug($var){
-    echo '<pre>'; print_r($var); echo "</pre>";
-  }
 
   
 

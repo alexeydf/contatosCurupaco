@@ -15,12 +15,13 @@ require ('funcoes/funcoes.php');
   <title>Contatos Curupacu Brasil 1.0</title>
 
   <link rel="stylesheet" href="css/style.css?<?php echo rand(1, 1000); ?>">
+  <link rel="stylesheet" href="icon/style.css?<?php echo rand(1, 1000); ?>">
 </head>
 
 <body>
   <header class="top-header">
     <a href="index.php?menuop=formulario">Formulário</a>
-    <a href="index.php?menuop=lista">Contatos</a>
+    <a href="index.php?menuop=contatos&situacao=0">Contatos</a>
   </header>
 
   <main>
@@ -35,6 +36,12 @@ require ('funcoes/funcoes.php');
         break;
       case 'receber':
         include("processos/receber.php");
+        break;
+      case 'contatos':
+        include("paginas/contatos.php");
+        break;
+      case 'contato':
+        include("paginas/contato.php");
         break;
 
       default:

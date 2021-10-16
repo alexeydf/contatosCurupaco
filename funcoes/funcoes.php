@@ -9,7 +9,7 @@ function formatar($valor){
 }
 
 function data($data){
-  $data = date('d/m/Y',strtotime($data));
+  $data = date('d/m/Y à\s H:i:s',strtotime($data));
 
   return $data;
 }
