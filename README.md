@@ -1,5 +1,5 @@
 # Formulário de contatos
- Formulário de contatos em PHP e MySQL. 
+ Formulário de contatos em PHP orientado a objetos e MySQL. 
 
 ## Menu Formulário
 Um formulário simples com os campos:
