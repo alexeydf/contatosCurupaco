@@ -24,7 +24,7 @@ require ('funcoes/funcoes.php');
     <a href="index.php?menuop=contatos&situacao=0">Contatos</a>
   </header>
 
-  <main>
+  <main class="center">
     <?php
     $menuop = (isset($_GET['menuop'])) ? $_GET['menuop'] : 'home';
     switch ($menuop) {

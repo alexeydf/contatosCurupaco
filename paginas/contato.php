@@ -27,7 +27,7 @@ if(isset($_GET['id'])){
     <p class="nome">Nome: <span><?= $contato->nome ?></span></p>
     <p class="email">Assunto: <span><?= $contato->assunto ?></span></p>
     <p class="email">E-mail: <span><?= $contato->email ?></span></p>
-    <p class="telefone">Telefone: <span><?= $contato->telefone ?></span></p>
+    <p class="telefone">Telefone: <span>(<?= $contato->ddd ?>) <?= $contato->telefone ?></span></p>
 
     <div class="mensagem">
       <h4>Mensagem:</h4>

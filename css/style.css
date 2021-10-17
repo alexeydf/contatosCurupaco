@@ -124,25 +124,24 @@ main{
 }
 .center{
   width: 100%; 
-  max-width: 1200px; 
+  max-width: 880px; 
   margin: 0 auto;
 }
-.menu-msg{
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+.contatos-menu{
+  margin-bottom: 15px;
 }
-.menu-msg a{
-  background-color: #fff;
-  display: block;
-  width: 30%;
-  padding: 5px;
-  font-size: 1rem;
-  border-radius: 5px;
+.contatos-menu a{
+  text-transform: uppercase;
 }
-.menu-msg .marcado{
-  background-color: green;
-  color: #fff;
+.contatos-menu a:hover{
+  color: #02972f;
+}
+.ativo{
+  color: #02972f;
+}
+.contatos-menu span{
+  margin: 0 15px;
+  font-size: 1.1rem;
 }
 .contatos-conteudo{
   margin-bottom: 8px;
@@ -156,16 +155,21 @@ main{
   border: 1px solid #fff;
   cursor: pointer;
   padding: 12px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
 }
 .contatos-corpo{
   text-align: left;
   border: 1px solid #fff;
   padding: 15px;
 }
+.contatos-corpo p{
+  margin-bottom: 3px;
+  font-size: 1rem;
+}
+.contatos-corpo span{
+  color: #b9b9b9;
+}
 .mensagem{  
-  /*height: 0;*/
-  overflow: visible;
   transition: all .3s;
   margin: 8px 0;
 }
@@ -174,8 +178,8 @@ main{
 }
 .mensagem p{
   text-align: justify;
-  border: 1px solid #fff;
   padding: 10px 5px;
+  line-height: 1.5;
 }
 .acoes{
   display: flex;
@@ -194,15 +198,17 @@ main{
   width: 20%;
   text-align: left;
 }
-.data{
+.contatos-header .data{
   width: 40%;
   text-align: right;
 }
 .email span{
   text-transform: lowercase;
 }
-.msg-alerta{
-  margin-top: 8px; 
+.sem-msg{
+  border: 1px solid #fff;
+  padding: 10px 5px;
+  border-radius: 5px;
 }
 
 .contato .data{
@@ -211,7 +217,12 @@ main{
 .contato-header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+  padding: 0 8px;
 }
+
+  
 .contato .btn{
   border-radius: 25px 0 0 25px;
   width: 100px;
