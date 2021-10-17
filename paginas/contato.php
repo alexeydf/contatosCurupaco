@@ -16,10 +16,11 @@ if(isset($_GET['id'])){
   <div class="voltar">
     <a href="index.php?menuop=contatos&situacao=0" class="btn"><span class="icon-backward2"></span> Voltar</a>
   </div>
+
   <div class="contato-header">
     <h3><?= $contato->nome ?></h3>
     <p class="data"><span><?= data($contato->data) ?></span></p>
-    <a href=""><span class="icon-bin"></span></a>
+    <a href="#"><span class="icon-bin"></span></a>
   </div>
   
   <div class="contatos-corpo">
@@ -33,11 +34,30 @@ if(isset($_GET['id'])){
       <h4>Mensagem:</h4>
       <p><?= $contato->mensagem ?></p>
     </div>
-
-    <!--<div class="acoes">
-      <a href="">Marcar como lido</a>
-      <a href="">Excluir</a>
-    </div>-->
-  </div>
   </div>
 </section>
+
+<div class="modal-excluir">
+  <header class="modal-header">
+    <h4>Excluir</h4>
+    <a href=""><span class="icon-cross"></span></a>
+  </header>
+  
+  <p>Deseja realmente excluir o contato?</p>
+
+  <div class="modal-btns">
+    <a href="index.php?menuop=excluir&id=<?= $contato->id ?>" class="btn">Excluir</a>
+    <a href="index.php?menuop=contato&id=<?= $contato->id ?>" class="btn">Cancelar</a>
+  </div>
+</div>
+
+<script>
+  const $modal = document.querySelector('.modal-excluir');
+  const $btnExcluir = document.querySelector('.icon-bin');
+  const $contato = document.querySelector('.contato');
+
+  $btnExcluir.addEventListener('click', ()=>{
+    $modal.classList.add('modal-visivel');
+    $contato.classList.add('contato-escuro');
+  })
+</script>

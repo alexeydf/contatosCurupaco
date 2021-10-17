@@ -65,7 +65,7 @@ main{
   outline: 0;
   border: none;
   color: #303030;
-  background-color: #e9f3df;
+  background-color: #f9fdf5;
 }
 ::-webkit-input-placeholder{
   color: #646464;
@@ -229,3 +229,57 @@ main{
   padding: 5px 15px;
   margin-bottom: 20px;
 }
+
+/* Modal */
+.contato-escuro{
+  opacity: .2;
+}
+.modal-excluir{
+  width: 330px;
+  background-color: #fcfff9;
+  color: #303030;
+  border-radius: 5px;
+  position: absolute;
+  top: -500px;
+  /*left: calc(50% - 180px);*/
+  left: calc(50% - 165px);
+  transition: all .3s;
+}
+.modal-visivel{
+  top: 30%;
+}
+.modal-header{
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.modal-header a{
+  color: #303030;
+}
+.modal-excluir h4{
+  text-transform: uppercase;
+  
+}
+.modal-excluir p{
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+.modal-btns{
+  border-top: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.modal-btns .btn{
+  background-color: #0690ec;
+  color: #fcfff9;
+}
+.modal-btns .btn:nth-child(1){
+  background-color: #910202;
+}
+
+

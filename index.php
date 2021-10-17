@@ -43,6 +43,9 @@ require ('funcoes/funcoes.php');
       case 'contato':
         include("paginas/contato.php");
         break;
+      case 'excluir':
+        include("processos/excluir.php");
+        break;
 
       default:
         include("paginas/formulario.php");

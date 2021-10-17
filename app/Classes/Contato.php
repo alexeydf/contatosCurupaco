@@ -56,7 +56,7 @@ class Contato{
   }
 
   public function excluir(){
-    return (new Database('tb_mensagem'))->delete(' id = '.$this->id);
+    return (new Database('contatos'))->delete(' id = '.$this->id);
   }
 
   public function mensagemValida(){
